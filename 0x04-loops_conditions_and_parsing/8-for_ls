@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-# displays the content of the current directory in a certain format
+# displays content of the current directory in a list format
 
-list=$(ls)
-for file in $list
-do
-    find "$file" | cut -d- -f2
+for i in *; do
+	echo "$i" | cut -d '-' -f2
 done
